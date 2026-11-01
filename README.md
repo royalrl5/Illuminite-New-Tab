@@ -16,6 +16,7 @@ Temporary add-ons are removed when Firefox closes; to keep it, package and sign 
 - Press and hold an app for one second, then drag it to a new spot.
 - The three-line button (bottom right) holds add app, screensaver, theme, sound, settings, and save/load file.
 - Your apps and settings are kept in extension storage and stay until you uninstall the extension. **Save to file** makes a backup you can load again with **Load from file** (the screensaver video is not included in the file).
+- Hold down on an app until it becomes slightly smaller to move it.
 
 ## **Credits:**
 Allysun - BrowOS
