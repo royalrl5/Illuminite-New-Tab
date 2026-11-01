@@ -1,0 +1,30 @@
+{
+	"manifest_version": 3,
+	"name": "Illuminite New Tab",
+	"version": "1.6.0",
+	"description": "A beautifully designed new tab with web apps, search, wallpapers, themes, sound effects, a screensaver and a full desktop mode.",
+	"icons": {
+		"16": "icons/browos-logo.png",
+		"32": "icons/browos-logo.png",
+		"48": "icons/browos-logo.png",
+		"128": "icons/browos-logo.png"
+	},
+	"chrome_url_overrides": {
+		"newtab": "index.html"
+	},
+	"permissions": [
+		"storage",
+		"unlimitedStorage"
+	],
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "browos@local.dev",
+			"strict_min_version": "140.0",
+			"data_collection_permissions": {
+				"required": [
+					"none"
+				]
+			}
+		}
+	}
+}
