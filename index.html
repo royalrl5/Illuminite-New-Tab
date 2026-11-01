@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>New Tab</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div id="wall"></div>
+
+		<header id="bar">
+			<span></span>
+			<time id="clock"></time>
+			<span></span>
+		</header>
+
+		<main id="desk">
+			<form id="search" role="search">
+				<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 5 5"/></svg>
+				<input id="q" type="text" placeholder="Search the web or type a link" autocomplete="off" autofocus aria-label="Search" />
+				<button type="button" id="eng" title="Search engine" aria-haspopup="menu"></button>
+			</form>
+			<div id="apps"></div>
+		</main>
+
+		<button id="menu-btn" class="glass" aria-label="Menu" aria-haspopup="menu" title="Menu">
+			<svg viewBox="0 0 24 24"><path d="M5 7h14M5 12h14M5 17h14"/></svg>
+		</button>
+
+		<div id="menu" hidden role="menu"></div>
+
+		<dialog id="dlg">
+			<form id="appform" autocomplete="off">
+				<h2 id="dlg-title">Add app</h2>
+				<label id="f-name">Name<input name="name" required maxlength="40" /></label>
+				<label id="f-url">Link<input name="url" placeholder="example.com" /></label>
+				<p id="dlg-err" class="err" role="alert"></p>
+				<div class="row">
+					<button type="button" id="dlg-cancel">Cancel</button>
+					<button type="submit" class="suggested" id="dlg-ok">Add</button>
+				</div>
+			</form>
+		</dialog>
+
+		<dialog id="set">
+			<h2>Settings</h2>
+			<h3>Appearance</h3>
+			<label class="line">Theme
+				<select id="s-theme">
+					<option value="system">Match system</option>
+					<option value="dark">Dark</option>
+					<option value="light">Light</option>
+				</select>
+			</label>
+			<div id="walls"></div>
+			<div class="row left">
+				<label class="btn">Upload wallpaper<input id="up-wall" type="file" accept="image/*" hidden /></label>
+			</div>
+			<h3>Screensaver</h3>
+			<div class="row left">
+				<label class="btn">Upload video<input id="up-vid" type="file" accept="video/*" hidden /></label>
+				<button id="clr-vid">Use default</button>
+			</div>
+			<label class="line">Start automatically
+				<select id="s-idle">
+					<option value="0">Never</option>
+					<option value="2">After 2 minutes</option>
+					<option value="5">After 5 minutes</option>
+					<option value="10">After 10 minutes</option>
+				</select>
+			</label>
+			<h3>General</h3>
+			<label class="line">Search engine
+				<select id="s-engine"></select>
+			</label>
+			<label class="line">Sound effects <input id="s-snd" type="checkbox" role="switch" /></label>
+			<div class="row"><button class="suggested" id="set-close">Done</button></div>
+		</dialog>
+
+		<input id="imp" type="file" accept="application/json,.json" hidden />
+
+		<div id="saver" hidden>
+			<video id="sv" loop muted playsinline></video>
+			<canvas id="cv"></canvas>
+			<div id="sclock"></div>
+		</div>
+		<div id="toast" role="status"></div>
+
+		<script src="app.js"></script>
+	</body>
+</html>
