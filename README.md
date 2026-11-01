@@ -1,4 +1,4 @@
-# BrowOS
+# Illuminite New Tab
 
 A beautiful makeover for your new tab. Works in Firefox 109+ and Chromium browsers.
 
